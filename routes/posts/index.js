@@ -20,7 +20,8 @@ router.get("/", [
 ]);
 
 router.get("/:username", (req, res) => {
-  res.send(`This is ${req.params.username}'s page`);
+  res.render("profile", { username: req.params.username });
+  // res.send(`This is ${req.params.username}'s page`);
 });
 
 module.exports = router;
